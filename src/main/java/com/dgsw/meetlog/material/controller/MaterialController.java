@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/materials")
+@RequestMapping("/materials")
 @RequiredArgsConstructor
 @Tag(name = "Material", description = "첨부파일 및 자료 설명 API")
 public class MaterialController {
