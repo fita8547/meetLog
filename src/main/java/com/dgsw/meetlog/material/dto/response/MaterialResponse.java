@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Builder
 public class MaterialResponse {
 
-    private Integer Id;
+    private Integer userId;
     private String fileName;
     private String fileUrl;
     private String description;
@@ -19,7 +19,7 @@ public class MaterialResponse {
 
     public static MaterialResponse from(Material material) {
         return MaterialResponse.builder()
-                .Id(Math.toIntExact(Long.valueOf(material.getId())))
+                .userId(material.getUserId())
                 .fileName(material.getFileName())
                 .fileUrl(material.getFileUrl())
                 .description(material.getDescription())

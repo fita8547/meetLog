@@ -24,7 +24,7 @@ public class Material {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer Id;
+    private Integer userId;
 
     private String fileName;
     private String fileUrl;
