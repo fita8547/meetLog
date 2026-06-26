@@ -4,6 +4,8 @@ import com.dgsw.meetlog.material.entity.Material;
 import lombok.Builder;
 import lombok.Getter;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Builder
 public class MaterialResponse {
@@ -12,6 +14,8 @@ public class MaterialResponse {
     private String fileName;
     private String fileUrl;
     private String description;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public static MaterialResponse from(Material material) {
         return MaterialResponse.builder()
@@ -19,6 +23,8 @@ public class MaterialResponse {
                 .fileName(material.getFileName())
                 .fileUrl(material.getFileUrl())
                 .description(material.getDescription())
+                .createdAt(material.getCreatedAt())
+                .updatedAt(material.getUpdatedAt())
                 .build();
     }
 }
