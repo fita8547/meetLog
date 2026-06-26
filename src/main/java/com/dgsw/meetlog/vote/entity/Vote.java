@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class Vote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long voteId;
+    private Integer voteId;
 
     // 투표 제목
     @Column(nullable = false)
